@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO Meta Tags -->
+    <title>Company Portfolio - Professional Business Solutions</title>
+    <meta name="description" content="A modern company portfolio showcasing our services, team, and projects. Building the future of business together.">
+    <meta name="keywords" content="company, portfolio, business, services, team, projects, professional">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Company Portfolio - Professional Business Solutions">
+    <meta property="og:description" content="A modern company portfolio showcasing our services, team, and projects.">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Company Portfolio - Professional Business Solutions">
+    <meta name="twitter:description" content="A modern company portfolio showcasing our services, team, and projects.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1620519086899-1b941c49f202?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1620519086872-fec32e3bfc69?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero .highlight {
+            color: #60a5fa;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #333;
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-content {
+            padding: 2rem;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        /* Service Cards */
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        
+        .service-list li {
+            padding: 0.25rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .checkmark {
+            color: #10b981;
+            font-size: 1.2rem;
+        }
+        
+        /* Team Cards */
+        .team-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+        }
+        
+        .team-card h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-role {
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: #6b7280;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #2563eb;
+        }
+        
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2563eb;
+            display: block;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+        
+        /* Utility Classes */
+        .bg-gray {
+            background: #f9fafb;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-4 {
+            margin-bottom: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Company</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="btn btn-primary">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Building the <span class="highlight">Future Together</span></h1>
+                <p>We transform businesses through innovative solutions, strategic thinking, and exceptional execution. Your success is our mission.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-large">Start Your Project</a>
+                    <a href="#about" class="btn btn-outline btn-large">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our Company</h2>
+                <p>We are a forward-thinking company dedicated to delivering exceptional results through innovation, expertise, and unwavering commitment to our clients' success.</p>
+            </div>
+            
+            <div class="grid grid-2 mb-4">
+                <div>
+                    <h3>Our Story</h3>
+                    <p>Founded with a vision to bridge the gap between traditional business practices and modern digital solutions, we have grown into a trusted partner for companies worldwide.</p>
+                    <p>Our journey began with a simple belief: every business deserves access to world-class expertise and innovative solutions that drive real results.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1620519086899-1b941c49f202?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85" alt="About Us" style="border-radius: 12px;">
+                </div>
+            </div>
+
+            <div class="stats">
+                <div>
+                    <span class="stat-number">500+</span>
+                    <span>Projects Completed</span>
+                </div>
+                <div>
+                    <span class="stat-number">200+</span>
+                    <span>Happy Clients</span>
+                </div>
+                <div>
+                    <span class="stat-number">50+</span>
+                    <span>Team Members</span>
+                </div>
+                <div>
+                    <span class="stat-number">10+</span>
+                    <span>Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We offer comprehensive solutions tailored to meet your business needs and drive sustainable growth.</p>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="card service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Strategic Consulting</h3>
+                    <p>Expert guidance to transform your business strategy and achieve sustainable growth.</p>
+                    <ul class="service-list">
+                        <li><span class="checkmark">✓</span> Business Analysis</li>
+                        <li><span class="checkmark">✓</span> Growth Planning</li>
+                        <li><span class="checkmark">✓</span> Process Optimization</li>
+                        <li><span class="checkmark">✓</span> Market Research</li>
+                    </ul>
+                </div>
+
+                <div class="card service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Digital Solutions</h3>
+                    <p>Cutting-edge technology solutions tailored to your business needs.</p>
+                    <ul class="service-list">
+                        <li><span class="checkmark">✓</span> Web Development</li>
+                        <li><span class="checkmark">✓</span> Mobile Apps</li>
+                        <li><span class="checkmark">✓</span> Cloud Services</li>
+                        <li><span class="checkmark">✓</span> AI Integration</li>
+                    </ul>
+                </div>
+
+                <div class="card service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Data Analytics</h3>
+                    <p>Transform your data into actionable insights for informed decision making.</p>
+                    <ul class="service-list">
+                        <li><span class="checkmark">✓</span> Business Intelligence</li>
+                        <li><span class="checkmark">✓</span> Data Visualization</li>
+                        <li><span class="checkmark">✓</span> Predictive Analytics</li>
+                        <li><span class="checkmark">✓</span> KPI Tracking</li>
+                    </ul>
+                </div>
+
+                <div class="card service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Marketing Excellence</h3>
+                    <p>Comprehensive marketing strategies to amplify your brand and reach.</p>
+                    <ul class="service-list">
+                        <li><span class="checkmark">✓</span> Digital Marketing</li>
+                        <li><span class="checkmark">✓</span> Brand Strategy</li>
+                        <li><span class="checkmark">✓</span> Content Creation</li>
+                        <li><span class="checkmark">✓</span> SEO/SEM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="bg-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>Our diverse team of experts brings together decades of experience and a passion for innovation.</p>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="card team-card">
+                    <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85" alt="Sarah Johnson" class="team-avatar">
+                    <h3>Sarah Johnson</h3>
+                    <p class="team-role">CEO & Founder</p>
+                    <p>Visionary leader with 15+ years of experience driving business transformation.</p>
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="card team-card">
+                    <img src="https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjB0ZWFtfGVufDB8fHxibHVlfDE3NTUwOTIwMTV8MA&ixlib=rb-4.1.0&q=85" alt="Michael Chen" class="team-avatar">
+                    <h3>Michael Chen</h3>
+                    <p class="team-role">CTO</p>
+                    <p>Tech innovator passionate about creating scalable solutions for modern businesses.</p>
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="card team-card">
+                    <img src="https://images.unsplash.com/photo-1573497701175-00c200fd57f0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxvZmZpY2UlMjB0ZWFtfGVufDB8fHxibHVlfDE3NTUwOTIwMTV8MA&ixlib=rb-4.1.0&q=85" alt="Emily Rodriguez" class="team-avatar">
+                    <h3>Emily Rodriguez</h3>
+                    <p class="team-role">Head of Marketing</p>
+                    <p>Creative strategist who helps brands tell their story and connect with audiences.</p>
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="card team-card">
+                    <img src="https://images.pexels.com/photos/8254894/pexels-photo-8254894.jpeg" alt="David Park" class="team-avatar">
+                    <h3>David Park</h3>
+                    <p class="team-role">Lead Developer</p>
+                    <p>Full-stack developer with expertise in modern technologies and user experience.</p>
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+                <p>Explore some of our most successful projects that showcase our expertise and commitment to excellence.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1620519086899-1b941c49f202?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85" alt="E-Commerce Platform">
+                    <div class="card-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Complete e-commerce solution with advanced analytics and user management.</p>
+                        <div class="tags">
+                            <span>React</span> <span>Node.js</span> <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1620519157189-c06a79a52f99?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHw0fHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85" alt="Corporate Rebranding">
+                    <div class="card-content">
+                        <h3>Corporate Rebranding</h3>
+                        <p>Complete brand identity redesign for Fortune 500 company.</p>
+                        <div class="tags">
+                            <span>Branding</span> <span>Design</span> <span>Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/9221770/pexels-photo-9221770.jpeg" alt="Data Analytics Dashboard">
+                    <div class="card-content">
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>Real-time analytics platform for business intelligence and reporting.</p>
+                        <div class="tags">
+                            <span>Analytics</span> <span>Dashboard</span> <span>BI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Ready to start your next project? We'd love to hear from you. Get in touch and let's discuss how we can help.</p>
+            </div>
+            
+            <div class="grid grid-2">
+                <div>
+                    <h3>Let's Connect</h3>
+                    <div style="margin: 2rem 0;">
+                        <p><strong>Email:</strong> hello@company.com</p>
+                        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                        <p><strong>Address:</strong> 123 Business St, Suite 100<br>City, State 12345</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p>Building the future through innovation, expertise, and unwavering commitment to excellence.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Team</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li>Strategic Consulting</li>
+                        <li>Digital Solutions</li>
+                        <li>Data Analytics</li>
+                        <li>Marketing Excellence</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>hello@company.com<br>
+                    +1 (555) 123-4567<br>
+                    123 Business St<br>
+                    City, State 12345</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Company. All rights reserved. Built with ❤️ for businesses that dare to dream big.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
