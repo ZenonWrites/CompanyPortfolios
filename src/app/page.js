@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform, useInView } from 'framer-motion'
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Input } from '@/components/ui/input.jsx'
@@ -70,7 +71,7 @@ export default function App() {
     {
       name: 'Sarah Johnson',
       position: 'CEO & Founder',
-      image: 'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85',
+      image: 'https://as1.ftcdn.net/v2/jpg/06/07/99/32/1000_F_607993268_SrfcfqkR5zd8NlbTzyXYPHRkxuoRFcoD.jpg',
       bio: 'Visionary leader with 15+ years of experience driving business transformation.',
       linkedin: '#',
       twitter: '#'
@@ -78,7 +79,7 @@ export default function App() {
     {
       name: 'Michael Chen',
       position: 'CTO',
-      image: 'https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjB0ZWFtfGVufDB8fHxibHVlfDE3NTUwOTIwMTV8MA&ixlib=rb-4.1.0&q=85',
+      image: 'https://static.vecteezy.com/system/resources/previews/028/533/323/large_2x/asian-man-in-30s-black-hair-building-background-generative-ai-free-photo.jpeg',
       bio: 'Tech innovator passionate about creating scalable solutions for modern businesses.',
       linkedin: '#',
       twitter: '#'
@@ -86,7 +87,7 @@ export default function App() {
     {
       name: 'Emily Rodriguez',
       position: 'Head of Marketing',
-      image: 'https://images.unsplash.com/photo-1573497701175-00c200fd57f0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxvZmZpY2UlMjB0ZWFtfGVufDB8fHxibHVlfDE3NTUwOTIwMTV8MA&ixlib=rb-4.1.0&q=85',
+      image: 'https://static.vecteezy.com/system/resources/previews/025/474/309/non_2x/portrait-of-a-professional-woman-in-a-suit-business-woman-standing-in-an-office-ai-generated-photo.jpg',
       bio: 'Creative strategist who helps brands tell their story and connect with audiences.',
       linkedin: '#',
       twitter: '#'
@@ -94,7 +95,7 @@ export default function App() {
     {
       name: 'David Park',
       position: 'Lead Developer',
-      image: 'https://images.pexels.com/photos/8254894/pexels-photo-8254894.jpeg',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.CvOglq4H2TMNPVFylxvelwHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
       bio: 'Full-stack developer with expertise in modern technologies and user experience.',
       linkedin: '#',
       twitter: '#'
@@ -106,21 +107,21 @@ export default function App() {
     {
       title: 'E-Commerce Platform',
       category: 'Development',
-      image: 'https://images.unsplash.com/photo-1620519086899-1b941c49f202?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85',
+      image: 'https://www.export.org.uk/media/cvb9zpgu/ECommerce.jpg',
       description: 'Complete e-commerce solution with advanced analytics and user management.',
       tags: ['React', 'Node.js', 'MongoDB']
     },
     {
       title: 'Corporate Rebranding',
       category: 'Design',
-      image: 'https://images.unsplash.com/photo-1620519157189-c06a79a52f99?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHw0fHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85',
+      image: 'https://lh7-rt.googleusercontent.com/docsz/AD_4nXcCkR1SckbDtvt_pyp7GaVEJdCiYxu4gOtRRFZMV1YQvqc9eOBKcdMyrIGKJ0yN0W8XgT9GpRI2NbCUqAuP0m_yfPhk27v7aBpNJRi8RyLQVxN1vHv2d_5OFOZLCqB1qrlmEp2PMgJfy7vll9Ie7BEivi8?key=CUhgADjt77N4J93OAJT7Mw',
       description: 'Complete brand identity redesign for Fortune 500 company.',
       tags: ['Branding', 'Design', 'Strategy']
     },
     {
       title: 'Data Analytics Dashboard',
       category: 'Analytics',
-      image: 'https://images.pexels.com/photos/9221770/pexels-photo-9221770.jpeg',
+      image: 'https://assets.datamation.com/uploads/2024/01/dm_20240102-types-of-data-analytics.png',
       description: 'Real-time analytics platform for business intelligence and reporting.',
       tags: ['Analytics', 'Dashboard', 'BI']
     }
@@ -153,21 +154,21 @@ export default function App() {
     {
       title: 'The Future of Digital Transformation',
       excerpt: 'Exploring how emerging technologies are reshaping business landscapes.',
-      date: '2024-06-15',
-      image: 'https://images.unsplash.com/photo-1620519086872-fec32e3bfc69?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85',
+      date: '2025-06-15',
+      image: 'https://images.squarespace-cdn.com/content/v1/5f3e9d283afd436ef827c60f/36cfc889-4c81-44b9-8455-39c46aa9bd69/DigitalTransformation_Consulting_VeteranOwned__Becker_Digital.jpg',
       category: 'Technology'
     },
     {
       title: 'Building Resilient Teams in Remote Work',
       excerpt: 'Strategies for maintaining team cohesion and productivity in distributed environments.',
-      date: '2024-06-10',
-      image: 'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85',
+      date: '2025-06-10',
+      image: 'https://esoftskills.com/wp-content/uploads/2023/12/navigating_remote_work_challenges.jpg',
       category: 'Management'
     },
     {
       title: 'Data-Driven Decision Making',
       excerpt: 'How to leverage analytics for better business outcomes and strategic planning.',
-      date: '2024-06-05',
+      date: '2025-06-05',
       image: 'https://images.unsplash.com/photo-1620519086899-1b941c49f202?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3xlbnwwfHx8Ymx1ZXwxNzU1MDkyMDA5fDA&ixlib=rb-4.1.0&q=85',
       category: 'Analytics'
     }
@@ -1011,7 +1012,7 @@ export default function App() {
           {/* Bottom Bar */}
           <div className="border-t border-primary-foreground/20 pt-8 text-center">
             <p className="opacity-70">
-              © 2024 Company. All rights reserved. Built with ❤️ for businesses that dare to dream big.
+              © 2025 Company. All rights reserved. Built with ❤️ for businesses that dare to dream big.
             </p>
           </div>
         </div>
