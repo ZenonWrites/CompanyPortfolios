@@ -40,6 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-#Code file
-CompanyPortfolioCSS.txt
-CompanyPortfolioHTML.txt
+# Custom project files
+/CompanyPortfolioHTML.txt
+/CompanyPortfolioCSS.txt
